@@ -1,0 +1,121 @@
+/* line 1, ../sass/scrollpage.scss */
+.title {
+  margin: 50px;
+}
+
+/* line 4, ../sass/scrollpage.scss */
+.scroll {
+  position: relative;
+  width: 50%;
+  height: 640px;
+  overflow: hidden;
+}
+/* line 9, ../sass/scrollpage.scss */
+.scroll .scroll-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+/* line 13, ../sass/scrollpage.scss */
+.scroll .scroll-content section {
+  position: absolute;
+  width: 100%;
+  height: 640px;
+  display: block;
+}
+/* line 18, ../sass/scrollpage.scss */
+.scroll .scroll-content section:nth-child(1) {
+  background: black;
+}
+/* line 19, ../sass/scrollpage.scss */
+.scroll .scroll-content section:nth-child(2) {
+  background: orange;
+}
+/* line 20, ../sass/scrollpage.scss */
+.scroll .scroll-content section:nth-child(3) {
+  background: red;
+}
+/* line 21, ../sass/scrollpage.scss */
+.scroll .scroll-content section:nth-child(4) {
+  background: purple;
+}
+/* line 22, ../sass/scrollpage.scss */
+.scroll .scroll-content section:nth-child(5) {
+  background: green;
+}
+/* line 26, ../sass/scrollpage.scss */
+.scroll .elevation {
+  position: fixed;
+  left: 42%;
+  height: 316px;
+  width: 100px;
+  z-index: 12;
+}
+/* line 32, ../sass/scrollpage.scss */
+.scroll .elevation .stops {
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  width: 15px;
+}
+/* line 38, ../sass/scrollpage.scss */
+.scroll .elevation .stops .stop {
+  position: absolute;
+  left: -5px;
+  right: -5px;
+  height: 74px;
+  z-index: 1;
+}
+/* line 45, ../sass/scrollpage.scss */
+.scroll .elevation .stops .stop:after {
+  content: ' ';
+  position: absolute;
+  left: 6px;
+  top: 1px;
+  width: 13px;
+  height: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  background: transparent;
+  z-index: 2;
+}
+/* line 58, ../sass/scrollpage.scss */
+.scroll .elevation .stops .stop:hover:after {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.5);
+}
+/* line 63, ../sass/scrollpage.scss */
+.scroll .elevation .stops .ticks {
+  width: 5px;
+  height: 55px;
+  background: rgba(255, 255, 255, 0.85);
+  background-size: 5px 5px;
+  background-repeat: repeat-y;
+  margin: 19px auto 0;
+}
+/* line 72, ../sass/scrollpage.scss */
+.scroll .elevation .altimeter {
+  position: absolute;
+  bottom: 0;
+  width: auto;
+  margin: 0;
+  right: 36px;
+  font-size: 1.4em;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 700;
+}
+/* line 84, ../sass/scrollpage.scss */
+.scroll .elevation .altimeter:after {
+  position: absolute;
+  top: 3px;
+  right: -42px;
+  height: 15px;
+  width: 26px;
+  content: "";
+  background: #fff;
+  background-size: cover;
+  background-repeat: none;
+}

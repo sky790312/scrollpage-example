@@ -1,0 +1,97 @@
+.title {
+  margin: 50px;
+}
+.scroll {
+    position: relative;
+    width: 50%;
+    height: 640px;
+    overflow: hidden;
+  .scroll-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    section {
+      position: absolute;
+      width: 100%;
+      height: 640px;
+      display: block;
+      &:nth-child(1) { background: black; }
+      &:nth-child(2) { background: orange;}
+      &:nth-child(3) { background: red;}
+      &:nth-child(4) { background: purple;}
+      &:nth-child(5) { background: green;}
+    }
+  }
+
+  .elevation {
+    position: fixed;
+    left: 42%;
+    height: 316px;
+    width: 100px;
+    z-index: 12;
+    .stops {
+      position: absolute;
+      bottom: 15px;
+      right: 0;
+      width: 15px;
+
+      .stop{
+        position: absolute;
+        left: -5px;
+        right: -5px;
+        height: 74px;
+        z-index: 1;
+
+        &:after {
+          content: ' ';
+          position: absolute;
+          left: 6px;
+          top: 1px;
+          width: 13px;
+          height: 13px;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          border-radius: 50%;
+          cursor: pointer;
+          background: transparent;
+          z-index: 2;
+        }
+        &:hover:after{
+          border: 1px solid rgba(255, 255, 255,.8);
+          background: rgba(255,255,255,.5);
+        }
+      }
+      .ticks {
+        width: 5px;
+        height: 55px;
+        background: rgba(255,255,255,.85);
+        background-size: 5px 5px;
+        background-repeat: repeat-y;
+        margin: 19px auto 0;
+      }
+    }
+    .altimeter {
+      position: absolute;
+      bottom: 0;
+      width: auto;
+      margin: 0;
+      right: 36px;
+      font-size: 1.4em;
+      color: white;
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: 700;
+
+      &:after {
+        position: absolute;
+        top: 3px;
+        right: -42px;
+        height: 15px;
+        width: 26px;
+        content: "";
+        background: #fff;
+        background-size: cover;
+        background-repeat: none;
+      }
+    }
+  }
+}
