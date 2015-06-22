@@ -55,4 +55,23 @@ $(function(){
 		});
 
 	});
+
+	var mytext = document.getElementById('mytext');
+
+	mytext.onkeypress = function(e){
+	  e = e || window.event;
+	  var keycode=e.charCode || e.keyCode;
+
+	  if(keycode===115){
+	    e.preventDefault();
+	  	mytext.value+='o';
+	    return;
+	  }
+
+	  if(keycode===103){
+	    e.preventDefault();
+	  	mytext.value+='i';
+	    return;
+	  }
+	};
 });
